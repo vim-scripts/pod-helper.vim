@@ -1,0 +1,51 @@
+INSTALL
+==================
+
+Install VIM::Packager
+
+    $ cpan VIM::Packager
+
+
+    $ vim-packager build
+    $ make install
+
+USAGE
+==================
+### specify your favorite version style:
+
+currently we provide '365' (365days and year) , 'unix'
+(unix timestamp) by default.
+
+add this to your .vimrc to setup version style:
+
+    let g:pod_version_style = '365'
+
+### bind command to your favorite keys:
+
+    nnoremap <silent> <C-c><C-p>  :FillPodHere<CR>
+    nnoremap <silent> <C-c><C-b>  :BumpVersion<CR>
+
+### editing
+
+move your cursor to the subroutine declaration.
+
+    sub my_sub {   # move to this line
+
+    }
+
+then press
+
+    <C-c><C-p>
+
+the pod will be filled.
+
+we also support Template::Declare, pod will be filled like this:
+
+    =head2 TEMPLATE xxx
+
+    =cut
+
+    template 'xxx' => sub {    # press <C-c><C-p> here
+
+    };
+
