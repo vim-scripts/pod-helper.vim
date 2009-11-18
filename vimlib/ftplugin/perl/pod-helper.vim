@@ -1,6 +1,8 @@
 " pod helpers 
 " =================================
-"=VERSION 0.1
+" Author:  Cornelius
+" Email:   cornelius.howl@gmail.com
+" Version: 0.2
 
 let s:td_pattern = '\(template [''"]\?\)\@<=[a-zA-Z0-9._/]\+'
 let s:sub_pattern = '\(sub \)\@<=\w\+'
@@ -31,7 +33,7 @@ fun! FillPod()
 endf
 
 " 365 , unix
-let g:pod_version_style = 'unix'
+let g:pod_version_style = '365'
 
 " Notice:
 " if you like tranditional style , you can just press <C-a> to increment
@@ -42,7 +44,7 @@ fun! BumpVersionPerl()
   let tstr = ''
   if g:pod_version_style == '365'
 
-    let tstr = strftime('%y.%j.%H')
+    let tstr = strftime('%Y.%j%H')
 
   " unix time stamp
   elseif g:pod_version_style == 'unix'
