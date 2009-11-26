@@ -2,7 +2,7 @@
 " =================================
 " Author:  Cornelius
 " Email:   cornelius.howl@gmail.com
-" Version: 0.2
+" Version: 0.3
 
 let s:td_pattern = '\(template [''"]\?\)\@<=[a-zA-Z0-9._/]\+'
 let s:sub_pattern = '\(sub \)\@<=\w\+'
